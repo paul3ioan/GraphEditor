@@ -55,8 +55,19 @@ namespace Translations
 		char* functionsBellmanLabel = "Bellman";
 		char* functionsTitle = "Functions";
 
+		char* fileTitle = "File settings";
+		char* fileLoadAll = "Load all";
+		char* fileLoadGraph = "Load graph";
+		char* fileLoadPreferences = "Load preferences";
+		char* fileSave = "Save all";
+
 		char* notImplementedTitle = "Not implemented";
 		char* notImplementedMessage = "Sorry feature is not implemented";
+
+		char* bfsTitle = "BFS algorithm";
+		char* dfsTitle = "DFS algorithm";
+
+		char* rewatch = "Rewatch";
 		char* generalExit = "Exit";
 	};
 	struct French {
@@ -112,8 +123,19 @@ namespace Translations
 		char* functionsBellmanLabel = "[FR] Bellman";
 		char* functionsTitle = "[FR] Functions";
 
+		char* fileTitle = "[FR] File settings";
+		char* fileLoadAll = "[FR] Load all";
+		char* fileLoadGraph = "[FR] Load graph";
+		char* fileLoadPreferences = "[FR] Load preferences";
+		char* fileSave = "[FR] Save all";
+
 		char* notImplementedTitle = "[FR] Not implemented";
 		char* notImplementedMessage = "[FR] Sorry feature is not implemented";
+
+		char* bfsTitle = "[FR] BFS algorithm";
+		char* dfsTitle = "[FR] DFS algorithm";
+
+		char* rewatch = "[FR] Rewatch";
 		char* generalExit = "[FR] Exit";
 	};
 	struct Romanian {
@@ -167,6 +189,16 @@ namespace Translations
 		char* functionsBfsLabel = "[RO] BFS";
 		char* functionsBellmanLabel = "[RO] Bellman";
 		char* functionsTitle = "[RO] Functions";
+
+		char* fileTitle = "[RO] File settings";
+		char* fileLoadAll = "[RO] Load all";
+		char* fileLoadGraph = "[RO] Load graph";
+		char* fileLoadPreferences = "[RO] Load preferences";
+		char* fileSave = "[RO] Save all";
+
+		char* bfsTitle = "[RO] BFS algorithm";
+		char* dfsTitle = "[RO] DFS algorithm";
+		char* rewatch = "[RO] Rewatch";
 
 		char* generalExit = "[RO] Exit";
 		char* notImplementedTitle = "[RO] Not implemented";
@@ -230,9 +262,21 @@ namespace Translations
 		char functionsBellmanLabel[100];
 		char functionsTitle[100];
 
+		char fileTitle[100];
+		char fileLoadAll[100];
+		char fileLoadGraph[100];
+		char fileLoadPreferences[100];
+		char fileSave[100];
+
 		char notImplementedTitle[100];
 		char notImplementedMessage[100];
+
+		char bfsTitle[100];
+		char dfsTitle[100];
+		char rewatch[100];
 		char generalExit[100];
+		Languages lang;
+
 	};
 	void changeTranslation(Languages lang, Translate&);
 

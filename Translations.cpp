@@ -27,7 +27,6 @@ void Translations::changeTranslation(Languages lang, Translate& translation) {
 		strcpy(translation.romanian, en.romanian);
 		strcpy(translation.visualLabel, en.visualLabel);
 		strcpy(translation.languageLabel, en.languageLabel);
-		strcpy(translation.generalExit, en.generalExit);
 		strcpy(translation.outOfWorkZoneClickMessage, en.outOfWorkZoneClickMessage);
 		strcpy(translation.outOfWorkZoneClickTitle, en.outOfWorkZoneClickTitle);
 		strcpy(translation.notEnoughNodesTitle, en.notEnoughNodesTitle);
@@ -52,6 +51,18 @@ void Translations::changeTranslation(Languages lang, Translate& translation) {
 		strcpy(translation.functionsTitle, en.functionsTitle);
 		strcpy(translation.notImplementedTitle, en.notImplementedTitle);
 		strcpy(translation.notImplementedMessage, en.notImplementedMessage);
+		strcpy(translation.fileTitle, en.fileTitle);
+		strcpy(translation.fileLoadAll, en.fileLoadAll);
+		strcpy(translation.fileLoadGraph, en.fileLoadGraph);
+		strcpy(translation.fileLoadPreferences, en.fileLoadPreferences);
+		strcpy(translation.fileSave, en.fileSave);
+		strcpy(translation.generalExit, en.generalExit);
+		strcpy(translation.bfsTitle, en.bfsTitle);
+		strcpy(translation.rewatch, en.rewatch);
+		strcpy(translation.dfsTitle, en.dfsTitle);
+
+		translation.lang = Translations::english;
+
 		break;
 	case Translations::romanian:
 		strcpy(translation.programTitle, ro.programTitle);
@@ -75,7 +86,6 @@ void Translations::changeTranslation(Languages lang, Translate& translation) {
 		strcpy(translation.romanian, ro.romanian);
 		strcpy(translation.visualLabel, ro.visualLabel);
 		strcpy(translation.languageLabel, ro.languageLabel);
-		strcpy(translation.generalExit, ro.generalExit);
 		strcpy(translation.outOfWorkZoneClickMessage, ro.outOfWorkZoneClickMessage);
 		strcpy(translation.outOfWorkZoneClickTitle, ro.outOfWorkZoneClickTitle);
 		strcpy(translation.notEnoughNodesTitle, ro.notEnoughNodesTitle);
@@ -100,6 +110,17 @@ void Translations::changeTranslation(Languages lang, Translate& translation) {
 		strcpy(translation.functionsTitle, ro.functionsTitle);
 		strcpy(translation.notImplementedTitle, ro.notImplementedTitle);
 		strcpy(translation.notImplementedMessage, ro.notImplementedMessage);
+		strcpy(translation.fileTitle, ro.fileTitle);
+		strcpy(translation.fileLoadAll, ro.fileLoadAll);
+		strcpy(translation.fileLoadGraph, ro.fileLoadGraph);
+		strcpy(translation.fileLoadPreferences, ro.fileLoadPreferences);
+		strcpy(translation.fileSave, ro.fileSave);
+		strcpy(translation.generalExit, ro.generalExit);
+		strcpy(translation.bfsTitle, ro.bfsTitle);
+		strcpy(translation.rewatch, ro.rewatch);
+		strcpy(translation.dfsTitle, ro.dfsTitle);
+		translation.lang = Translations::romanian;
+
 		break;
 	case Translations::french:
 		strcpy(translation.programTitle, fr.programTitle);
@@ -123,7 +144,6 @@ void Translations::changeTranslation(Languages lang, Translate& translation) {
 		strcpy(translation.romanian, fr.romanian);
 		strcpy(translation.visualLabel, fr.visualLabel);
 		strcpy(translation.languageLabel, fr.languageLabel);
-		strcpy(translation.generalExit, fr.generalExit);
 		strcpy(translation.outOfWorkZoneClickMessage, fr.outOfWorkZoneClickMessage);
 		strcpy(translation.outOfWorkZoneClickTitle, fr.outOfWorkZoneClickTitle);
 		strcpy(translation.notEnoughNodesTitle, fr.notEnoughNodesTitle);
@@ -148,6 +168,17 @@ void Translations::changeTranslation(Languages lang, Translate& translation) {
 		strcpy(translation.functionsTitle, fr.functionsTitle);
 		strcpy(translation.notImplementedTitle, fr.notImplementedTitle);
 		strcpy(translation.notImplementedMessage, fr.notImplementedMessage);
+		strcpy(translation.fileTitle, fr.fileTitle);
+		strcpy(translation.fileLoadAll, fr.fileLoadAll);
+		strcpy(translation.fileLoadGraph, fr.fileLoadGraph);
+		strcpy(translation.fileLoadPreferences, fr.fileLoadPreferences);
+		strcpy(translation.fileSave, fr.fileSave);
+		strcpy(translation.generalExit, fr.generalExit);
+		strcpy(translation.bfsTitle, fr.bfsTitle);
+		strcpy(translation.rewatch, fr.rewatch);
+		strcpy(translation.dfsTitle, fr.dfsTitle);
+		translation.lang = Translations::french;
+
 		break;
 	default:
 		break;
