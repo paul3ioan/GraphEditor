@@ -3,7 +3,7 @@
 namespace GraphHelpers
 {
 	void drawNode(int,int, char*, bool);
-	void showName(int textColor,int,int, char*);
+	void showName(int textColor,int,int, char*, bool);
 	void drawCurvedLine(int x1, int y1, int x2, int y2, int color, int w);
 	void drawCurvedLine2(int x1, int y1, int x2, int y2, int color, int w);
 	void drawArrow(int x1, int y1, int x2, int y2, int color, int w);

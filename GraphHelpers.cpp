@@ -145,9 +145,12 @@ void GraphHelpers::drawCurvedLine(int x1, int y1, int x2, int y2, int color, int
 	drawTriangle(2 * x4 - (x2 + x4) / 2, 2 * y4 - (y2 + y4) / 2, x4, y4, color); // FINALY
 	printWeight(xT, yT, w);
 }
-void GraphHelpers::showName(int textColor, int x, int y, char* number)
+void GraphHelpers::showName(int textColor, int x, int y, char* number, bool isSelected)
 {
 	setcolor(textColor);
+	if (isSelected) {
+		setbkcolor(RED);
+	} else
 	setbkcolor(pallete.graphNodeBackgroundColor);
 	settextjustify(CENTER_TEXT, CENTER_TEXT);
 	if (strlen(number) < 3)
@@ -163,9 +166,8 @@ void GraphHelpers::drawNode(int x, int y, char* value, bool isSelected = false)
 {
 	setlinestyle(SOLID_LINE, 1, NORM_WIDTH);
 	if (isSelected) {
-		setcolor(BLACK);
+		setcolor(RED);
 		setfillstyle(SOLID_FILL, RED);
-
 	}
 	else {
 	setcolor(pallete.graphNodeBackgroundColor);
@@ -173,20 +175,21 @@ void GraphHelpers::drawNode(int x, int y, char* value, bool isSelected = false)
 	}
 	circle(x, y, RADIUS_VALUE);
 	if (isSelected) {
-		floodfill(x, y, RED);
+		floodfill(x + 2, y + 2, RED);
 	}
 	else {
 		floodfill(x, y, pallete.graphNodeBackgroundColor);
 	}
-	showName(pallete.graphNodeLabelColor, x, y, value);
+	setfillstyle(SOLID_FILL, pallete.backgroundColor);
+	showName(pallete.graphNodeLabelColor, x, y, value, isSelected);
 }
 void GraphHelpers::drawGraph(Graph& graph) {
 	setfillstyle(SOLID_FILL, pallete.backgroundColor);
-	bar(150, 80, 2000, 2000);
+	bar(135, 60, 2000, 2000);
 	for (auto i : graph.nodes) {
 		char label[100];
 		strcpy(label, GeneralHelpers::fromIntToCharArray(i.value));
-		drawNode(i.currPosition.x, i.currPosition.y, label);
+		drawNode(i.currPosition.x, i.currPosition.y, label, i.isHovered);
 	}
 	for (int i = 0; i < 101; i ++) {
 		for (auto node: graph.orientedEdges[i]) {

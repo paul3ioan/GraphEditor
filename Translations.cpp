@@ -43,6 +43,15 @@ void Translations::changeTranslation(Languages lang, Translate& translation) {
 		strcpy(translation.addEdgeInputError, en.addEdgeInputError);
 		strcpy(translation.addAutoEdgeInfo, en.addAutoEdgeInfo);
 		strcpy(translation.addEdgeTitle, en.addEdgeTitle);
+		strcpy(translation.nodeOptionsDelete, en.nodeOptionsDelete);
+		strcpy(translation.nodeOptionsMove, en.nodeOptionsMove);
+		strcpy(translation.nodeOptionsTitle, en.nodeOptionsTitle);
+		strcpy(translation.functionsDfsLabel, en.functionsDfsLabel);
+		strcpy(translation.functionsBfsLabel, en.functionsBfsLabel);
+		strcpy(translation.functionsBellmanLabel, en.functionsBellmanLabel);
+		strcpy(translation.functionsTitle, en.functionsTitle);
+		strcpy(translation.notImplementedTitle, en.notImplementedTitle);
+		strcpy(translation.notImplementedMessage, en.notImplementedMessage);
 		break;
 	case Translations::romanian:
 		strcpy(translation.programTitle, ro.programTitle);
@@ -82,6 +91,15 @@ void Translations::changeTranslation(Languages lang, Translate& translation) {
 		strcpy(translation.addEdgeInputError, ro.addEdgeInputError);
 		strcpy(translation.addAutoEdgeInfo, ro.addAutoEdgeInfo);
 		strcpy(translation.addEdgeTitle, ro.addEdgeTitle);
+		strcpy(translation.nodeOptionsDelete, ro.nodeOptionsDelete);
+		strcpy(translation.nodeOptionsMove, ro.nodeOptionsMove);
+		strcpy(translation.nodeOptionsTitle, ro.nodeOptionsTitle);
+		strcpy(translation.functionsDfsLabel, ro.functionsDfsLabel);
+		strcpy(translation.functionsBfsLabel, ro.functionsBfsLabel);
+		strcpy(translation.functionsBellmanLabel, ro.functionsBellmanLabel);
+		strcpy(translation.functionsTitle, ro.functionsTitle);
+		strcpy(translation.notImplementedTitle, ro.notImplementedTitle);
+		strcpy(translation.notImplementedMessage, ro.notImplementedMessage);
 		break;
 	case Translations::french:
 		strcpy(translation.programTitle, fr.programTitle);
@@ -121,6 +139,15 @@ void Translations::changeTranslation(Languages lang, Translate& translation) {
 		strcpy(translation.addEdgeInputError, fr.addEdgeInputError);
 		strcpy(translation.addAutoEdgeInfo, fr.addAutoEdgeInfo);
 		strcpy(translation.addEdgeTitle, fr.addEdgeTitle);
+		strcpy(translation.nodeOptionsDelete, fr.nodeOptionsDelete);
+		strcpy(translation.nodeOptionsMove, fr.nodeOptionsMove);
+		strcpy(translation.nodeOptionsTitle, fr.nodeOptionsTitle);
+		strcpy(translation.functionsDfsLabel, fr.functionsDfsLabel);
+		strcpy(translation.functionsBfsLabel, fr.functionsBfsLabel);
+		strcpy(translation.functionsBellmanLabel, fr.functionsBellmanLabel);
+		strcpy(translation.functionsTitle, fr.functionsTitle);
+		strcpy(translation.notImplementedTitle, fr.notImplementedTitle);
+		strcpy(translation.notImplementedMessage, fr.notImplementedMessage);
 		break;
 	default:
 		break;
