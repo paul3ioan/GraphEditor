@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{32dfd9b9-e304-4bc9-93b5-bc19d79d2920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Data">
+      <UniqueIdentifier>{56778454-2116-4b6e-8b07-837ef30aded0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Services">
+      <UniqueIdentifier>{87fb5932-4358-4a77-91f4-df75eba0a85d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface">
+      <UniqueIdentifier>{81fbea3f-ebf8-4148-a7d2-25230df9498a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\Interface">
+      <UniqueIdentifier>{d235b837-cdf4-4cb2-9395-23bc8e04d919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\InteraceHelpers">
+      <UniqueIdentifier>{2e30f56a-4594-42f1-abd1-39e2cdc28e6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Services\General-Helpers">
+      <UniqueIdentifier>{06223985-e006-4e89-9ee8-109fd0f341c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Data\Node">
+      <UniqueIdentifier>{3cc0a095-1f02-4f50-bb17-19a2c20f5f87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Data\Translations">
+      <UniqueIdentifier>{b67bd3f9-2479-426f-b116-00e1df65bfbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Data\Graph">
+      <UniqueIdentifier>{bcc6d470-b16b-4bfd-879e-8c30b2bede71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{dcea6895-49ca-4fd7-8df1-750a4b48f9ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exceptions">
+      <UniqueIdentifier>{b723718b-5ea7-4f56-ac27-5d851b8b5b57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\InteraceHelpers\GraphHelpers">
+      <UniqueIdentifier>{9c48538d-f6b8-4f58-930f-cd8f15d55ba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\Interface\MainMenu">
+      <UniqueIdentifier>{c2b4785a-007d-4657-80aa-055d1c3ac3b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\MouseEvents">
+      <UniqueIdentifier>{de96ca84-bf0d-467f-b0c0-31b14baf6c24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\Button">
+      <UniqueIdentifier>{84c1a54f-249b-4137-b7f8-7bcd065a700f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\AddNewNodeInterface">
+      <UniqueIdentifier>{c8de6b13-1277-425b-9470-11d638093998}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\Preferences">
+      <UniqueIdentifier>{23b5147c-49cc-4fa2-be9f-0a8b94fe24de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\ErrorPopup">
+      <UniqueIdentifier>{a58d7a32-5a2d-4766-8b49-e8d2c79e0241}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\DeleteGraph">
+      <UniqueIdentifier>{226890d9-081a-4fe2-b95e-b931c0e17e25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph_Interface\AddEdgeValue">
+      <UniqueIdentifier>{6273d9b5-18c9-4ae8-9867-428c7852db75}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bgiout.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="dibutil.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="drawing.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="file.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="misc.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="mouse.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="palette.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="text.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="winbgi.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="winthread.cxx">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Graph_Interface\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Translations.cpp">
+      <Filter>Graph_Data\Translations</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneralHelpers.cpp">
+      <Filter>Graph_Services\General-Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Graph_Data\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Graph_Data\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphTests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicException.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphHelpers.cpp">
+      <Filter>Graph_Interface\InteraceHelpers\GraphHelpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Graph_Interface\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Graph_Interface\Interface\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseEvents.cpp" />
+    <ClCompile Include="Interface.cpp" />
+    <ClCompile Include="Interface_Constants.h">
+      <Filter>Graph_Data</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuActions.cpp" />
+    <ClCompile Include="AddNodeInterface.cpp">
+      <Filter>Graph_Interface\AddNewNodeInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Preferences.cpp">
+      <Filter>Graph_Interface\Preferences</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorsPallete.cpp">
+      <Filter>Graph_Data</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorPopup.cpp">
+      <Filter>Graph_Interface\ErrorPopup</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteGraph.cpp">
+      <Filter>Graph_Interface\DeleteGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="AddEdgeValue.cpp">
+      <Filter>Graph_Interface\AddEdgeValue</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dibutil.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="winbgi.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="winbgim.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="winbgitypes.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Translations.h">
+      <Filter>Graph_Data\Translations</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneralHelpers.h">
+      <Filter>Graph_Services\General-Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Graph_Data\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Graph_Data\Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphHelpers.h">
+      <Filter>Graph_Interface\InteraceHelpers\GraphHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Graph_Interface\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Graph_Interface\Interface\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseEvents.h" />
+    <ClInclude Include="Interface.h" />
+    <ClInclude Include="MainMenuActions.h" />
+    <ClInclude Include="AddNodeInterface.h">
+      <Filter>Graph_Interface\AddNewNodeInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Preferences.h">
+      <Filter>Graph_Interface\Preferences</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorsPallete.h">
+      <Filter>Graph_Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorPopup.h">
+      <Filter>Graph_Interface\ErrorPopup</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteGraph.h">
+      <Filter>Graph_Interface\DeleteGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="AddEdgeValue.h">
+      <Filter>Graph_Interface\AddEdgeValue</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

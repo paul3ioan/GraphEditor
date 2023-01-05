@@ -1,0 +1,131 @@
+#include "Translations.h"
+void Translations::changeTranslation(Languages lang, Translate& translation) {
+	Translations::English en;
+	Translations::French fr;
+	Translations::Romanian ro;
+	switch (lang)
+	{
+	case Translations::english:
+		strcpy(translation.programTitle, en.programTitle);
+		strcpy(translation.fileButton, en.fileButton);
+		strcpy(translation.inputTitleError, en.inputTitleError);
+		strcpy(translation.functionsButton, en.functionsButton);
+		strcpy(translation.helpButton, en.helpButton);
+		strcpy(translation.preferencesButton, en.preferencesButton);
+		strcpy(translation.moreInfoButton, en.moreInfoButton);
+		strcpy(translation.addNodeTitle, en.addNodeTitle);
+		strcpy(translation.addNodeNodeInList, en.addNodeNodeInList);
+		strcpy(translation.addNodeAutoButton, en.addNodeAutoButton);
+		strcpy(translation.addNodeInputButton, en.addNodeInputButton);
+		strcpy(translation.addNodeInputError, en.addNodeInputError);
+		strcpy(translation.addNodeInputLabel, en.addNodeInputLabel);
+		strcpy(translation.preferenceTitle, en.preferenceTitle);
+		strcpy(translation.darkMode, en.darkMode);
+		strcpy(translation.lightMode, en.lightMode);
+		strcpy(translation.english, en.english);
+		strcpy(translation.french, en.french);
+		strcpy(translation.romanian, en.romanian);
+		strcpy(translation.visualLabel, en.visualLabel);
+		strcpy(translation.languageLabel, en.languageLabel);
+		strcpy(translation.generalExit, en.generalExit);
+		strcpy(translation.outOfWorkZoneClickMessage, en.outOfWorkZoneClickMessage);
+		strcpy(translation.outOfWorkZoneClickTitle, en.outOfWorkZoneClickTitle);
+		strcpy(translation.notEnoughNodesTitle, en.notEnoughNodesTitle);
+		strcpy(translation.notEnoughNodesMessage, en.notEnoughNodesMessage);
+		strcpy(translation.clickOnANodeMessage, en.clickOnANodeMessage);
+		strcpy(translation.noGraphToDeleteMessage, en.noGraphToDeleteMessage);
+		strcpy(translation.noGraphToDeleteTitle, en.noGraphToDeleteTitle);
+		strcpy(translation.deleteGraphConfirm, en.deleteGraphConfirm);
+		strcpy(translation.deleteGraphMessage, en.deleteGraphMessage);
+		strcpy(translation.deleteGraphPopupTitle, en.deleteGraphPopupTitle);
+		strcpy(translation.deleteGraphTitle, en.deleteGraphTitle);
+		strcpy(translation.addEdgeInputLabel, en.addEdgeInputLabel);
+		strcpy(translation.addEdgeInputError, en.addEdgeInputError);
+		strcpy(translation.addAutoEdgeInfo, en.addAutoEdgeInfo);
+		strcpy(translation.addEdgeTitle, en.addEdgeTitle);
+		break;
+	case Translations::romanian:
+		strcpy(translation.programTitle, ro.programTitle);
+		strcpy(translation.fileButton, ro.fileButton);
+		strcpy(translation.functionsButton, ro.functionsButton);
+		strcpy(translation.helpButton, ro.helpButton);
+		strcpy(translation.preferencesButton, ro.preferencesButton);
+		strcpy(translation.moreInfoButton, ro.moreInfoButton);
+		strcpy(translation.addNodeTitle, ro.addNodeTitle);
+		strcpy(translation.inputTitleError, ro.inputTitleError);
+		strcpy(translation.addNodeAutoButton, ro.addNodeAutoButton);
+		strcpy(translation.addNodeInputButton, ro.addNodeInputButton);
+		strcpy(translation.addNodeInputError, ro.addNodeInputError);
+		strcpy(translation.addNodeInputLabel, ro.addNodeInputLabel);
+		strcpy(translation.addNodeNodeInList, ro.addNodeNodeInList);
+		strcpy(translation.darkMode, ro.darkMode);
+		strcpy(translation.lightMode, ro.lightMode);
+		strcpy(translation.english, ro.english);
+		strcpy(translation.preferenceTitle, ro.preferenceTitle);
+		strcpy(translation.french, ro.french);
+		strcpy(translation.romanian, ro.romanian);
+		strcpy(translation.visualLabel, ro.visualLabel);
+		strcpy(translation.languageLabel, ro.languageLabel);
+		strcpy(translation.generalExit, ro.generalExit);
+		strcpy(translation.outOfWorkZoneClickMessage, ro.outOfWorkZoneClickMessage);
+		strcpy(translation.outOfWorkZoneClickTitle, ro.outOfWorkZoneClickTitle);
+		strcpy(translation.notEnoughNodesTitle, ro.notEnoughNodesTitle);
+		strcpy(translation.notEnoughNodesMessage, ro.notEnoughNodesMessage);
+		strcpy(translation.clickOnANodeMessage, ro.clickOnANodeMessage);
+		strcpy(translation.noGraphToDeleteMessage, ro.noGraphToDeleteMessage);
+		strcpy(translation.noGraphToDeleteTitle, ro.noGraphToDeleteTitle);
+		strcpy(translation.deleteGraphConfirm, ro.deleteGraphConfirm);
+		strcpy(translation.deleteGraphMessage, ro.deleteGraphMessage);
+		strcpy(translation.deleteGraphPopupTitle, ro.deleteGraphPopupTitle);
+		strcpy(translation.deleteGraphTitle, ro.deleteGraphTitle);
+		strcpy(translation.addEdgeInputLabel, ro.addEdgeInputLabel);
+		strcpy(translation.addEdgeInputError, ro.addEdgeInputError);
+		strcpy(translation.addAutoEdgeInfo, ro.addAutoEdgeInfo);
+		strcpy(translation.addEdgeTitle, ro.addEdgeTitle);
+		break;
+	case Translations::french:
+		strcpy(translation.programTitle, fr.programTitle);
+		strcpy(translation.fileButton, fr.fileButton);
+		strcpy(translation.functionsButton, fr.functionsButton);
+		strcpy(translation.helpButton, fr.helpButton);
+		strcpy(translation.inputTitleError, fr.inputTitleError);
+		strcpy(translation.preferencesButton, fr.preferencesButton);
+		strcpy(translation.moreInfoButton, fr.moreInfoButton);
+		strcpy(translation.addNodeTitle, fr.addNodeTitle);
+		strcpy(translation.addNodeNodeInList, fr.addNodeNodeInList);
+		strcpy(translation.addNodeAutoButton, fr.addNodeAutoButton);
+		strcpy(translation.addNodeInputButton, fr.addNodeInputButton);
+		strcpy(translation.addNodeInputError, fr.addNodeInputError);
+		strcpy(translation.addNodeInputLabel, fr.addNodeInputLabel);
+		strcpy(translation.darkMode, fr.darkMode);
+		strcpy(translation.lightMode, fr.lightMode);
+		strcpy(translation.english, fr.english);
+		strcpy(translation.preferenceTitle, fr.preferenceTitle);
+		strcpy(translation.french, fr.french);
+		strcpy(translation.romanian, fr.romanian);
+		strcpy(translation.visualLabel, fr.visualLabel);
+		strcpy(translation.languageLabel, fr.languageLabel);
+		strcpy(translation.generalExit, fr.generalExit);
+		strcpy(translation.outOfWorkZoneClickMessage, fr.outOfWorkZoneClickMessage);
+		strcpy(translation.outOfWorkZoneClickTitle, fr.outOfWorkZoneClickTitle);
+		strcpy(translation.notEnoughNodesTitle, fr.notEnoughNodesTitle);
+		strcpy(translation.notEnoughNodesMessage, fr.notEnoughNodesMessage);
+		strcpy(translation.clickOnANodeMessage, fr.clickOnANodeMessage);
+		strcpy(translation.noGraphToDeleteMessage, fr.noGraphToDeleteMessage);
+		strcpy(translation.noGraphToDeleteTitle, fr.noGraphToDeleteTitle);
+		strcpy(translation.deleteGraphConfirm, fr.deleteGraphConfirm);
+		strcpy(translation.deleteGraphMessage, fr.deleteGraphMessage);
+		strcpy(translation.deleteGraphPopupTitle, fr.deleteGraphPopupTitle);
+		strcpy(translation.deleteGraphTitle, fr.deleteGraphTitle);
+		strcpy(translation.addEdgeInputLabel, fr.addEdgeInputLabel);
+		strcpy(translation.addEdgeInputError, fr.addEdgeInputError);
+		strcpy(translation.addAutoEdgeInfo, fr.addAutoEdgeInfo);
+		strcpy(translation.addEdgeTitle, fr.addEdgeTitle);
+		break;
+	default:
+		break;
+	}
+}
+void Translations::initTranslation(Translate& trans) {
+	changeTranslation(english, trans);
+}
