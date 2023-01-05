@@ -73,6 +73,7 @@
     <ClCompile Include="drawing.cxx" />
     <ClCompile Include="ErrorPopup.cpp" />
     <ClCompile Include="file.cxx" />
+    <ClCompile Include="Functions.cpp" />
     <ClCompile Include="GeneralHelpers.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="GraphHelpers.cpp" />
@@ -86,6 +87,7 @@
     <ClCompile Include="mouse.cxx" />
     <ClCompile Include="MouseEvents.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="NodeInterface.cpp" />
     <ClCompile Include="palette.cxx" />
     <ClCompile Include="main.cxx" />
     <ClCompile Include="Preferences.cpp" />
@@ -103,6 +105,7 @@
     <ClInclude Include="DeleteGraph.h" />
     <ClInclude Include="dibutil.h" />
     <ClInclude Include="ErrorPopup.h" />
+    <ClInclude Include="Functions.h" />
     <ClInclude Include="GeneralHelpers.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="GraphHelpers.h" />
@@ -114,6 +117,7 @@
     <ClInclude Include="MainMenuActions.h" />
     <ClInclude Include="MouseEvents.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="NodeInterface.h" />
     <ClInclude Include="Preferences.h" />
     <ClInclude Include="Translations.h" />
     <ClInclude Include="winbgi.h" />

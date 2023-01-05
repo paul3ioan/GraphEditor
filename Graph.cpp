@@ -2,10 +2,12 @@
 #include "LogicException.h"
 
 void deleteGraph(Graph& graph) {
-	graph.nodes.clear();
+	graph.nodes.clear(); 
 	for (int i = 0; i <= 100; i++) {
 		graph.edges[i].clear();
 		graph.orientedEdges[i].clear();
+		graph.availableNode[i] = 0;
+
 	}
 	for (int i = 0; i <= 100; i++) {
 		for (int j = 0;j <= 100; j++)

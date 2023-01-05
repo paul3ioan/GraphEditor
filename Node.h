@@ -6,6 +6,7 @@ struct Node {
 	int value;
 	Position currPosition;
 	Position defaultPosition;
+	bool isHovered = false;
 };
 struct Edge {
 	Position start;

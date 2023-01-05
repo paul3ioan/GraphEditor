@@ -46,6 +46,17 @@ namespace Translations
 		char* addAutoEdgeInfo = "It will add a random value from 1 to 100";
 		char* addEdgeTitle = "Add edge";
 
+		char* nodeOptionsTitle = "Node options";
+		char* nodeOptionsDelete = "Delete node";
+		char* nodeOptionsMove = "Move node";
+
+		char* functionsDfsLabel = "DFS";
+		char* functionsBfsLabel = "BFS";
+		char* functionsBellmanLabel = "Bellman";
+		char* functionsTitle = "Functions";
+
+		char* notImplementedTitle = "Not implemented";
+		char* notImplementedMessage = "Sorry feature is not implemented";
 		char* generalExit = "Exit";
 	};
 	struct French {
@@ -92,6 +103,17 @@ namespace Translations
 		char* addAutoEdgeInfo = "[FR] It will add a random value from 1 to 100";
 		char* addEdgeTitle = "[FR] Add edge";
 
+		char* nodeOptionsTitle = "[FR] Node options";
+		char* nodeOptionsDelete = "[FR] Delete node";
+		char* nodeOptionsMove = "[FR] Move node";
+
+		char* functionsDfsLabel = "[FR] DFS";
+		char* functionsBfsLabel = "[FR] BFS";
+		char* functionsBellmanLabel = "[FR] Bellman";
+		char* functionsTitle = "[FR] Functions";
+
+		char* notImplementedTitle = "[FR] Not implemented";
+		char* notImplementedMessage = "[FR] Sorry feature is not implemented";
 		char* generalExit = "[FR] Exit";
 	};
 	struct Romanian {
@@ -137,7 +159,18 @@ namespace Translations
 		char* addAutoEdgeInfo = "[RO] It will add a random value from 1 to 100";
 		char* addEdgeTitle = "[RO] Add edge";
 
+		char* nodeOptionsTitle = "[RO] Node options";
+		char* nodeOptionsDelete = "[RO] Delete node";
+		char* nodeOptionsMove = "[RO] Move node";
+
+		char* functionsDfsLabel = "[RO] DFS";
+		char* functionsBfsLabel = "[RO] BFS";
+		char* functionsBellmanLabel = "[RO] Bellman";
+		char* functionsTitle = "[RO] Functions";
+
 		char* generalExit = "[RO] Exit";
+		char* notImplementedTitle = "[RO] Not implemented";
+		char* notImplementedMessage = "[RO] Sorry feature is not implemented";
 	};
 	enum Languages {
 		english,
@@ -188,6 +221,17 @@ namespace Translations
 		char addAutoEdgeInfo[100];
 		char addEdgeTitle[100];
 
+		char nodeOptionsTitle[100];
+		char nodeOptionsDelete[100];
+		char nodeOptionsMove[100];
+
+		char functionsDfsLabel[100];
+		char functionsBfsLabel[100];
+		char functionsBellmanLabel[100];
+		char functionsTitle[100];
+
+		char notImplementedTitle[100];
+		char notImplementedMessage[100];
 		char generalExit[100];
 	};
 	void changeTranslation(Languages lang, Translate&);
