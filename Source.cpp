@@ -11,6 +11,7 @@
 #include "ColorsPallete.h"
 #include "MouseEvents.h"
 #include "GraphHelpers.h"
+#include "FileServices.h"
 Translations::Translate translations;
 ColorsPallete::Pallete pallete;
 int main() {
@@ -19,7 +20,9 @@ int main() {
 	ColorsPallete::initColorMode(pallete);
 	MainMenu::MainMenu mainMenu;
 	Graph graph;
+	FileServices::configureData(graph);
 	Interface::initInterface(mainMenu);
+	Interface::refreshInterface(mainMenu, graph);
 	MouseEvents::initMouseEvents(mainMenu, graph);
 	//principalTest();
 }

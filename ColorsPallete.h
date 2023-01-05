@@ -15,6 +15,7 @@ namespace ColorsPallete
 		int buttonLabelActiveColor;
 		int graphNodeBackgroundColor;
 		int graphNodeLabelColor;
+		int graphNodeHighlight;
 		int backgroundColor;
 		int exitBackgroundColor;
 		int exitTextColor;
@@ -29,8 +30,12 @@ namespace ColorsPallete
 		int errorMessageColor;
 		int edgeColor;
 		int edgeValueColor;
+		int edgeHighlight;
+		ColorMode mode;
 	};
 	struct DarkMode {
+		int edgeHighlight = RGB(80, 90, 100);
+		int graphNodeHighlight = RGB(100, 100, 100);
 		int backgroundColor = RGB(46, 40, 40);
 		int buttonBackgroundColor = RGB(65, 162, 113);
 		int buttonLabelColor = RGB(239, 242, 240);
@@ -55,6 +60,8 @@ namespace ColorsPallete
 		int edgeValueColor = RGB(200, 180, 200);
 	};
 	struct LightMode {
+		int edgeHighlight = RGB(210, 90, 100);
+		int graphNodeHighlight = RGB(200, 100, 100);
 		int backgroundColor = RGB(241, 241, 241);
 		int buttonBackgroundColor = RGB(65, 162, 113);
 		int buttonLabelColor = RGB(239, 242, 240);

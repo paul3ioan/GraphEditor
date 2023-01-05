@@ -1,4 +1,4 @@
-#include "Functions.h"
+#include "Dfs.h"
 #include "ErrorPopup.h"
 #include <vector>
 #include "graphics.h"
@@ -6,21 +6,23 @@
 #include "Graph.h"
 #include "GraphHelpers.h"
 #include "Interface_Constants.h"
-#include "Dfs.h"
+#include "FileServices.h"
+#include "GraphHelpers.h"
 #include "Translations.h"
+#include "Interface.h"
 #include "ColorsPallete.h"
-#include "Bfs.h"
 #include "GeneralHelpers.h"
+#include <stack>
 
-void Functions::closePopup(int main, int popup) {
+void Dfs::closePopup(int main, int popup) {
 	setactivepage(main);
 	setcurrentwindow(main);
 	closegraph(popup);
 }
-bool Functions::isButtonPressed(int x, int y, int x2, int y2, int xMouse, int yMouse) {
+bool Dfs::isButtonPressed(int x, int y, int x2, int y2, int xMouse, int yMouse) {
 	return x <= xMouse && x2 >= xMouse && y <= yMouse && y2 >= yMouse;
 }
-int Functions::findButton(int x, int y, OptionsButtons optionsButtons)
+int Dfs::findButton(int x, int y, OptionsButtons optionsButtons)
 {
 	int index = 0;
 	for (auto i : optionsButtons.optionButton)
@@ -31,23 +33,21 @@ int Functions::findButton(int x, int y, OptionsButtons optionsButtons)
 	}
 	return -1;
 }
-Button::Button Functions::createButton(int y, char* label, bool isHovered = false) {
+Button::Button Dfs::createButton(int x, char* label, bool isHovered = false) {
 	Button::Button newButton;
-	newButton.x = 30;
-	newButton.y = y;
+	newButton.x = x;
+	newButton.y = 10;
 	newButton.isHovered = isHovered;
 	strcpy(newButton.label, label);
-	newButton.x2 = 270;
-	newButton.y2 = y + textheight(label) + PADDING_TOP;
+	newButton.x2 = x + textwidth(label) + 30;
+	newButton.y2 = 10 + textheight(label) + PADDING_TOP;
 	return newButton;
 }
-void Functions::initInterface(OptionsButtons& optionButtons) {
-	optionButtons.optionButton.push_back(createButton(30, translations.functionsDfsLabel));
-	optionButtons.optionButton.push_back(createButton(60, translations.functionsBfsLabel));
-	optionButtons.optionButton.push_back(createButton(90, translations.functionsBellmanLabel));
-	optionButtons.optionButton.push_back(createButton(200, translations.generalExit));
+void Dfs::initInterface(OptionsButtons& optionButtons) {
+	optionButtons.optionButton.push_back(createButton(200, translations.rewatch));
+	optionButtons.optionButton.push_back(createButton(300, translations.generalExit));
 }
-void Functions::changeButtonHovered(OptionsButtons& optionButtons, int index, bool isInputActive = false) {
+void Dfs::changeButtonHovered(OptionsButtons& optionButtons, int index, bool isInputActive = false) {
 	for (auto i : optionButtons.optionButton) {
 		if (i.isHovered) {
 			i.isHovered = false;
@@ -85,7 +85,7 @@ void Functions::changeButtonHovered(OptionsButtons& optionButtons, int index, bo
 	bar(i.x, i.y, i.x2, i.y2);
 	outtextxy((i.x + i.x2) / 2, (i.y + i.y2) / 2 + 4, i.label);
 }
-void Functions::drawInterface(OptionsButtons& optionButtons, bool isInputActive = false) {
+void Dfs::drawInterface(OptionsButtons& optionButtons, bool isInputActive = false) {
 	for (auto i : optionButtons.optionButton) {
 		if (i.isHovered) {
 			setfillstyle(SOLID_FILL, pallete.buttonBackgroundHoverColor);
@@ -108,44 +108,84 @@ void Functions::drawInterface(OptionsButtons& optionButtons, bool isInputActive 
 	bar(exitButton.x, exitButton.y, exitButton.x2, exitButton.y2);
 	outtextxy((exitButton.x + exitButton.x2) / 2, (exitButton.y + exitButton.y2) / 2 + 4, exitButton.label);
 }
-
-int Functions::initPopup(Graph& graph) {
+void Dfs::highlightEdge(Graph& graph, std::pair<int, int> coloredEdge) {
+	for (int i = 0; i < graph.orientedEdges[coloredEdge.first].size(); i++) {
+		if (graph.orientedEdges[coloredEdge.first][i].to.value == coloredEdge.second) {
+			graph.orientedEdges[coloredEdge.first][i].isHighlighted = true;
+		}
+	}
+}
+void Dfs::startDfs(Graph& graph) {
+	int fr[100] = { 0 };
+	GraphHelpers::drawGraph(graph);
+	delay(500);
+	for (int i = 0; i < 100; i++) {
+		if (!fr[i] && graph.availableNode[i]) {
+			std::stack<int> q;
+			q.push(i);
+			std::stack<std::pair<int, int>> edges;
+			while (!q.empty()) {
+				int aux = q.top();
+				fr[aux] = 1;
+				q.pop();
+				if (!edges.empty()) {
+					auto coloredEdge = edges.top();
+					edges.pop();
+					highlightEdge(graph, coloredEdge);
+				}
+				for (int i = 0; i < graph.nodes.size(); i++) {
+					if (graph.nodes[i].value == aux) {
+						graph.nodes[i].isHovered = true;
+						break;
+					}
+				}
+				for (auto edge : graph.orientedEdges[aux]) {
+					if (!fr[edge.to.value]) {
+						q.push(edge.to.value);
+					}
+					edges.push({ aux, edge.to.value });
+				}
+				GraphHelpers::drawGraph(graph);
+				delay(1000);
+			}
+			while (!edges.empty()) {
+				auto coloredEdge = edges.top();
+				edges.pop();
+				highlightEdge(graph, coloredEdge);
+				GraphHelpers::drawGraph(graph);
+				delay(1000);
+			}
+		}
+	}
+	for (int i = 0; i <= 100;i++) {
+		for (int j = 0; j < graph.orientedEdges[i].size(); j++)
+			graph.orientedEdges[i][j].isHighlighted = false;
+	}
+	for (int i = 0; i < graph.nodes.size(); i++) {
+		graph.nodes[i].isHovered = false;
+	}
+}
+int Dfs::initPopup(Graph& graph) {
+	DWORD screenWidth = GetSystemMetrics(SM_CXSCREEN);
+	DWORD screenHeight = GetSystemMetrics(SM_CYSCREEN);
 	int main = getcurrentwindow();
 	OptionsButtons optionButtons;
-	int popup = initwindow(300, 500, translations.functionsTitle, 450, 170);
+	int popup = initwindow(screenWidth, screenHeight, translations.dfsTitle);
 	initInterface(optionButtons);
 	setfillstyle(SOLID_FILL, pallete.backgroundColor);
 	bar(0, 0, 2000, 2000);
 	drawInterface(optionButtons);
+	Interface::createLayoutLines();
 	int x, y;
-	int selectedIndex;
-
-	Node selectedNode;
-	for (auto i : graph.nodes) {
-		if (i.isHovered) {
-			selectedNode = i;
-			break;
-		}
-	}
-
+	startDfs(graph);
 	while (true) {
 		if (ismouseclick(WM_LBUTTONDOWN)) {
 			getmouseclick(WM_LBUTTONDOWN, x, y);
 			int whichButton = findButton(x, y, optionButtons);
 			switch (whichButton) {
-			case dfs:
-				Dfs::initPopup(graph);
-				closePopup(main, popup);
-				return 1;
-			case bfs:
-				Bfs::initPopup(graph);
-				closePopup(main, popup);
-
-				return 1;
-			case bellman:
-				closePopup(main, popup);
-				ErrorPopup::errorInitPopup(translations.notImplementedTitle, translations.notImplementedMessage);
-				return 1;
+			case retry:
+				startDfs(graph);
+				break;
 			case exitt:
 				closePopup(main, popup);
 				return 1;

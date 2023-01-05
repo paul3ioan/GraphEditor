@@ -6,5 +6,7 @@ namespace Interface
 {
 	void initInterface(MainMenu::MainMenu&);
 	void refreshInterface(MainMenu::MainMenu&, Graph&);
+	void createLayoutLines();
+
 };
 

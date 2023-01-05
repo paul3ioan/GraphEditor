@@ -149,7 +149,7 @@ void GraphHelpers::showName(int textColor, int x, int y, char* number, bool isSe
 {
 	setcolor(textColor);
 	if (isSelected) {
-		setbkcolor(RED);
+		setbkcolor(pallete.graphNodeHighlight);
 	} else
 	setbkcolor(pallete.graphNodeBackgroundColor);
 	settextjustify(CENTER_TEXT, CENTER_TEXT);
@@ -166,8 +166,8 @@ void GraphHelpers::drawNode(int x, int y, char* value, bool isSelected = false)
 {
 	setlinestyle(SOLID_LINE, 1, NORM_WIDTH);
 	if (isSelected) {
-		setcolor(RED);
-		setfillstyle(SOLID_FILL, RED);
+		setcolor(pallete.graphNodeHighlight);
+		setfillstyle(SOLID_FILL, pallete.graphNodeHighlight);
 	}
 	else {
 	setcolor(pallete.graphNodeBackgroundColor);
@@ -175,7 +175,7 @@ void GraphHelpers::drawNode(int x, int y, char* value, bool isSelected = false)
 	}
 	circle(x, y, RADIUS_VALUE);
 	if (isSelected) {
-		floodfill(x + 2, y + 2, RED);
+		floodfill(x + 2, y + 2, pallete.graphNodeHighlight);
 	}
 	else {
 		floodfill(x, y, pallete.graphNodeBackgroundColor);
@@ -194,15 +194,16 @@ void GraphHelpers::drawGraph(Graph& graph) {
 	for (int i = 0; i < 101; i ++) {
 		for (auto node: graph.orientedEdges[i]) {
 			Position from = node.start, to = node.end;
+			int edgeColor = node.isHighlighted ? pallete.edgeHighlight : pallete.edgeColor;
 			if (i > node.to.value) {
-					drawArrow(from.x, from.y, to.x, to.y, pallete.edgeColor, node.cost);
+					drawArrow(from.x, from.y, to.x, to.y, edgeColor, node.cost);
 				continue;
 			}
 			if (graph.adjMatrix[node.to.value][i]) {
-				drawCurvedLine(from.x, from.y, to.x, to.y, pallete.edgeColor, node.cost);
+				drawCurvedLine(from.x, from.y, to.x, to.y, edgeColor, node.cost);
 			}
 			else {
-				drawArrow(from.x, from.y, to.x, to.y, pallete.edgeColor, node.cost);
+				drawArrow(from.x, from.y, to.x, to.y, edgeColor, node.cost);
 			}
 		}
 	}

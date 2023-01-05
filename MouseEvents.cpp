@@ -5,6 +5,7 @@
 #include "Preferences.h"
 #include "NodeInterface.h"
 #include "MainMenuActions.h"
+#include "FileMenu.h"
 #include "DeleteGraph.h"
 #include "Functions.h"
 #include "ErrorPopup.h"
@@ -90,6 +91,7 @@ void chooseButton(MainMenu::MainMenu& mainMenu, int oldPos, Graph& graph) {
 		break;
 	case MouseEvents::programs:
 		Functions::initPopup(graph);
+		break;
 	case MouseEvents::prettier:
 		ErrorPopup::errorInitPopup(translations.notImplementedTitle, translations.notImplementedMessage);
 		break;
@@ -100,7 +102,8 @@ void chooseButton(MainMenu::MainMenu& mainMenu, int oldPos, Graph& graph) {
 		Preference::initPopup(mainMenu, graph);
 		break;
 	case MouseEvents::file:
-		ErrorPopup::errorInitPopup(translations.notImplementedTitle, translations.notImplementedMessage);
+		FileMenu::initPopup(graph);
+		Interface::refreshInterface(mainMenu, graph);
 		break;
 	case MouseEvents::moreInfo:
 		ErrorPopup::errorInitPopup(translations.notImplementedTitle, translations.notImplementedMessage);

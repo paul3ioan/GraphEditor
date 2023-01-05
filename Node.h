@@ -13,11 +13,13 @@ struct Edge {
 	Position end;
 	Node to;
 	int cost;
+	bool isHighlighted;
 };
 struct OrientatedEdge {
 	Position start;
 	Position end;
 	Node to;
 	int cost;
+	bool isHighlighted = false;
 };
 

@@ -4,7 +4,7 @@
 #include "Translations.h"
 #include "ColorsPallete.h"
 
-void createLayoutLines() {
+void Interface::createLayoutLines() {
 	DWORD screenWidth = GetSystemMetrics(SM_CXSCREEN);
 	DWORD screenHeight = GetSystemMetrics(SM_CYSCREEN);
 	setfillstyle(SOLID_FILL, GREEN);
@@ -17,7 +17,7 @@ void Interface::initInterface(MainMenu::MainMenu& mainMenu) {
 	DWORD screenHeight = GetSystemMetrics(SM_CYSCREEN);
 	initwindow(screenWidth, screenHeight, translations.programTitle);
 	setfillstyle(SOLID_FILL, pallete.backgroundColor);
-	bar(0, 0, 2000, 1000);
+	bar(0, 0, 3000, 3000);
 	MainMenu::initInterface(mainMenu);
 	MainMenu::resetAllButtons(mainMenu);
 	createLayoutLines();

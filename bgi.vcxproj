@@ -65,14 +65,18 @@
   <ItemGroup>
     <ClCompile Include="AddEdgeValue.cpp" />
     <ClCompile Include="AddNodeInterface.cpp" />
+    <ClCompile Include="Bfs.cpp" />
     <ClCompile Include="bgiout.cxx" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="ColorsPallete.cpp" />
     <ClCompile Include="DeleteGraph.cpp" />
+    <ClCompile Include="Dfs.cpp" />
     <ClCompile Include="dibutil.cxx" />
     <ClCompile Include="drawing.cxx" />
     <ClCompile Include="ErrorPopup.cpp" />
     <ClCompile Include="file.cxx" />
+    <ClCompile Include="FileMenu.cpp" />
+    <ClCompile Include="FileServices.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="GeneralHelpers.cpp" />
     <ClCompile Include="Graph.cpp" />
@@ -100,11 +104,15 @@
   <ItemGroup>
     <ClInclude Include="AddEdgeValue.h" />
     <ClInclude Include="AddNodeInterface.h" />
+    <ClInclude Include="Bfs.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="ColorsPallete.h" />
     <ClInclude Include="DeleteGraph.h" />
+    <ClInclude Include="Dfs.h" />
     <ClInclude Include="dibutil.h" />
     <ClInclude Include="ErrorPopup.h" />
+    <ClInclude Include="FileMenu.h" />
+    <ClInclude Include="FileServices.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="GeneralHelpers.h" />
     <ClInclude Include="Graph.h" />
@@ -123,6 +131,9 @@
     <ClInclude Include="winbgi.h" />
     <ClInclude Include="winbgim.h" />
     <ClInclude Include="winbgitypes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="saved_data.out" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

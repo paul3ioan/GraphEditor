@@ -8,6 +8,8 @@ void ColorsPallete::changeColorMode(ColorMode mode, Pallete& pall) {
 	{
 	case ColorMode::darkMode:
 		pall.backgroundColor = dark.backgroundColor;
+		pall.graphNodeHighlight = dark.graphNodeHighlight;
+		pall.edgeHighlight = dark.edgeHighlight;
 		pall.buttonBackgroundColor = dark.buttonBackgroundColor;
 		pall.buttonLabelColor = dark.buttonLabelColor;
 		pall.buttonBackgroundHoverColor = dark.buttonBackgroundHoverColor;
@@ -29,8 +31,12 @@ void ColorsPallete::changeColorMode(ColorMode mode, Pallete& pall) {
 		pall.errorTitleColor = dark.errorTitleColor;
 		pall.edgeColor = dark.edgeColor;
 		pall.edgeValueColor = dark.edgeValueColor;
+		pall.mode = ColorMode::darkMode;
+
 		break;
 	case ColorMode::lightMode:
+		pall.graphNodeHighlight = light.graphNodeHighlight;
+		pall.edgeHighlight = light.edgeHighlight;
 		pall.backgroundColor = light.backgroundColor;
 		pall.buttonBackgroundColor = light.buttonBackgroundColor;
 		pall.buttonLabelColor = light.buttonLabelColor;
@@ -53,6 +59,7 @@ void ColorsPallete::changeColorMode(ColorMode mode, Pallete& pall) {
 		pall.errorTitleColor = light.errorTitleColor;
 		pall.edgeValueColor = light.edgeValueColor;
 		pall.edgeColor = light.edgeColor;
+		pall.mode = ColorMode::lightMode;
 		break;
 	default:
 		break;
